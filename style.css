@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffeca8;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: #ff2882;
+  text-shadow: 2px 2px 0 #ffd79c, 4px 4px 0 rgb(255 136 10 / 61%),
+    6px 6px 0 rgb(249 167 127 / 53%), 8px 8px 0 #ffd0ce;
+  transform: skewY(-6deg);
+  user-select: none;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  margin: 2rem 0rem;
+}
+
+.formPlaceholder {
+  width: 20%;
+}
+
+.imgPickerForm {
+  position: fixed;
+  z-index: 1000;
+  background-color: #ff2882;
+  color: white;
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  height: fit-content;
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.imgPickerForm label {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.imgPickerForm input {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+}
+
+.imgPickerForm button {
+  height: 45px;
+  color: #ff2882;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background-color: white;
+  border: 0;
+  border-radius: 12px;
+}
+
+.imgPickerForm button:active {
+  opacity: 0.85;
+}
+
+.gallery {
+  width: 100%;
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem 2rem;
+}
+
+.img__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out, opacity 800ms linear;
+}
+
+.img:hover {
+  transform: scale(1.4);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  transition: transform 600ms ease-in-out;
+}
+
+.img__price__container {
+  position: absolute;
+  height: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0px, transparent 100%);
+  font-size: 1.5rem;
+}
+
+.img__price__label {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 15%;
+  right: 15%;
+}
+
+.img__name {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+}
