@@ -90,6 +90,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #ff2882;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
